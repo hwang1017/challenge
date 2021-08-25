@@ -1,15 +1,15 @@
 'use strict';
 const mockDBCalls = require('../database/index.js');
 
-const getUsersHandler = async (request, response) => {
+const getItemsHandler = async (request, response) => {
   try {
-    const data = await mockDBCalls.getUsers();
+    const data = await mockDBCalls.getItems();
     return response.status(200).send(JSON.stringify(data));
-  } catch (err) {
+  } catch (error) {
     response.status(500);
   }
 };
 
 module.exports = (app) => {
-  app.get('/users', getUsersHandler);
+  app.get('/items', getItemsHandler);
 };
