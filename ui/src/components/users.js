@@ -28,7 +28,7 @@ function Users() {
         </div>
         {users.map(({ username, age }, index) => {
           return (
-            <div className='listitem data' key={index}>
+            <div className='listitem data' key={index + username}>
               <div className='listitem-1'>{username}</div>
               <div className='listitem-2'>{age}</div>
             </div>

@@ -50,7 +50,7 @@ function Demo() {
               <option
                 className='dropdown-item'
                 value={item}
-                key={index}
+                key={item}
                 onClick={(e) => selectHandler(e)}
               >
                 {item}
@@ -70,7 +70,7 @@ function Demo() {
         </div>
         {result.map((data, index) => {
           return (
-            <div className='listitem data' key={index}>
+            <div className='listitem data' key={index + `${data[0]}`}>
               <div className='listitem-1'>{data[0]}</div>
               <div className='listitem-2'>{data[1]}</div>
             </div>
